@@ -1,0 +1,15 @@
+@import "./layout/header";
+@import "./layout/footer";
+
+body {
+    max-width: 1440px;
+    margin: auto;
+}
+
+header {
+    @include header;
+}
+
+footer{
+    @include footer;
+}
