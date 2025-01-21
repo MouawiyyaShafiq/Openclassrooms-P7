@@ -1,16 +1,16 @@
 import { Route, Routes } from "react-router-dom"
-import PageAccueil from "./pages/pageAccueil"
-import PageAPropos from "./pages/pageAPropos"
-import PageLogement from "./pages/pageLogement"
-import PageErreur from "./pages/pageErreur"
+import PageHome from "./pages/pageHome"
+import PageAbout from "./pages/pageAbout"
+import PageHousing from "./pages/pageHousing"
+import PageError from "./pages/pageError"
 
 function Router (){
     return (
         <Routes>
-            <Route path="/" element={<PageAccueil/>}></Route>
-            <Route path="/A-Propos" element={<PageAPropos/>}></Route>
-            <Route path="/Logement" element={<PageLogement/>}></Route>
-            <Route path="*" element={<PageErreur/>}></Route>
+            <Route path="/" element={<PageHome/>}></Route>
+            <Route path="/about" element={<PageAbout/>}></Route>
+            <Route path="/housing" element={<PageHousing/>}></Route>
+            <Route path="*" element={<PageError/>}></Route>
         </Routes>
     )
 }
