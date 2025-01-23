@@ -1,15 +1,12 @@
 @import "./layout/header";
 @import "./layout/footer";
+@import "./pages/pageHome";
+@import "./pages/pageHousing";
+@import "./pages/pageAbout";
+@import "./pages/pageError";
+
 
 body {
     max-width: 1440px;
     margin: auto;
-}
-
-header {
-    @include header;
-}
-
-footer{
-    @include footer;
 }
