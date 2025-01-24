@@ -3,10 +3,12 @@ import bannerImg from "../images/paysage_plage.png"
 import { useEffect } from "react"
 import { useState } from "react"
 import Card from "../components/card"
+import { useNavigate } from "react-router-dom"
 
 function PageHome () {
 
     const [housingAddList, setHousingAddList] = useState([])
+    const navigate = useNavigate()
 
     useEffect(()=>{
         
@@ -24,6 +26,7 @@ function PageHome () {
                 setHousingAddList(addList)
 
             } catch (error) {
+                navigate("*")
                 console.error("Erreur lors de la récupération des données", error)
             }
 

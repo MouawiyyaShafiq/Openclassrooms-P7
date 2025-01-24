@@ -1,14 +1,13 @@
-import { useParams} from "react-router-dom"
+import { useNavigate, useParams} from "react-router-dom"
 import { useEffect } from "react"
 import { useState } from "react"
 import Carousel from "../components/carousel"
-import carouselImgs from "../images/paysage_plage.png"
 
 function PageHousing () {
     const {currentAddId} = useParams()
 
-    const [housingAddList, setHousingAddList] = useState(null)
     const [currentAdd, setCurrentAdd] = useState(null)
+    const navigate = useNavigate()
 
 
     useEffect(()=>{
@@ -24,16 +23,13 @@ function PageHousing () {
     
                 const addList = await response.json();
 
-                setHousingAddList(addList)
-                
-                if(housingAddList != null){
-
-                setCurrentAdd(housingAddList.find((add)=>add.id==currentAddId))
-
-                }
+                const foundAdd = addList.find((add)=>add.id==currentAddId)
+            
+                setCurrentAdd(foundAdd)
 
 
             } catch (error) {
+                navigate("*")
                 console.error("Erreur lors de la récupération des données", error)
             }
     
@@ -42,10 +38,9 @@ function PageHousing () {
         fetchData()
         
         
-    }, [housingAddList])
+    }, [])
 
-    
-    if (currentAdd != null ) {
+    if (currentAdd) {
 
     return (
 
