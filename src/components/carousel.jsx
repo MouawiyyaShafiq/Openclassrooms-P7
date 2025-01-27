@@ -34,14 +34,14 @@ function Carousel ({page, carouselImgs}) {
 
     return (
         <>
-            <div className={`carousel${page}`}>
+            <section className={`carousel${page}`}>
                 <img className={`carousel${page}_img`} src={carouselImgs[currentImg]} alt="Image illustrative de la location"></img>
                 <div className={`carousel${page}_arrows`} >
                     <img onClick={() => changeCurrentImg(-1)} className={`carousel${page}_arrows_Left`} src={arrowLeft} alt="Flèche vers la gauche" ></img>
                     <img onClick={() => changeCurrentImg(+1)}className={`carousel${page}_arrows_Right`} src={arrowRight} alt="Flèche vers la droite" ></img>
                 </div>
                 <p className={`carousel${page}_imgCounter`}>{`${currentImg+1} / ${carouselImgs.length}`}</p>
-            </div>  
+            </section>  
         </>
     )
 

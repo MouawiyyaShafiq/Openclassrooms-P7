@@ -9,7 +9,7 @@ function Router (){
         <Routes>
             <Route path="/" element={<PageHome/>}></Route>
             <Route path="/about" element={<PageAbout/>}></Route>
-            <Route path="/housing/:currentAddId" element={<PageHousing/>}></Route>
+            <Route path="/housing/:currentAdId" element={<PageHousing/>}></Route>
             <Route path="*" element={<PageError/>}></Route>
         </Routes>
     )

@@ -4,9 +4,9 @@ import { useState } from "react"
 import Carousel from "../components/carousel"
 
 function PageHousing () {
-    const {currentAddId} = useParams()
+    const {currentAdId} = useParams()
 
-    const [currentAdd, setCurrentAdd] = useState(null)
+    const [currentAd, setCurrentAd] = useState(null)
     const navigate = useNavigate()
 
 
@@ -15,17 +15,17 @@ function PageHousing () {
         async function fetchData() {
 
             try {
-                const response = await fetch("/addList.json");
+                const response = await fetch("/adList.json");
     
                 if (!response) {
                     throw new Error(`${response.status}`);
                   }
     
-                const addList = await response.json();
+                const adList = await response.json();
 
-                const foundAdd = addList.find((add)=>add.id==currentAddId)
+                const foundAd = adList.find((ad)=>ad.id==currentAdId)
             
-                setCurrentAdd(foundAdd)
+                setCurrentAd(foundAd)
 
 
             } catch (error) {
@@ -40,11 +40,11 @@ function PageHousing () {
         
     }, [])
 
-    if (currentAdd) {
+    if (currentAd) {
 
     return (
 
-        <Carousel page="Housing" carouselImgs={currentAdd.pictures}/>
+        <Carousel page="Housing" carouselImgs={currentAd.pictures}/>
         
     )}
 

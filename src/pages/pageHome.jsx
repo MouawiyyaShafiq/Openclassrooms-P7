@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom"
 
 function PageHome () {
 
-    const [housingAddList, setHousingAddList] = useState([])
+    const [housingAdList, setHousingAdList] = useState([])
     const navigate = useNavigate()
 
     useEffect(()=>{
@@ -15,15 +15,15 @@ function PageHome () {
         async function fetchData() {
 
             try {
-                const response = await fetch("/addList.json");
+                const response = await fetch("/adList.json");
 
                 if (!response) {
                     throw new Error(`${response.status}`);
                   }
 
-                const addList = await response.json();
+                const adList = await response.json();
 
-                setHousingAddList(addList)
+                setHousingAdList(adList)
 
             } catch (error) {
                 navigate("*")
@@ -34,7 +34,7 @@ function PageHome () {
 
         fetchData()
         
-    }, [housingAddList])
+    }, [housingAdList])
 
     return (
         <>
@@ -42,7 +42,7 @@ function PageHome () {
 
         <section className="galleryHome">
 
-            {housingAddList.map((add)=>{ return <Card key={add.id} page="Home" cardImg={add.cover} cardTitle={add.title} id={add.id}/>})}
+            {housingAdList.map((ad)=>{ return <Card key={ad.id} page="Home" cardImg={ad.cover} cardTitle={ad.title} id={ad.id}/>})}
             
         </section>
         </>

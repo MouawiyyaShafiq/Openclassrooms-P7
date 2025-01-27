@@ -274,6 +274,121 @@ footer p {
   }
 }
 
+.colapse {
+  max-width: 1023px;
+  width: 82.5%;
+  margin: 0 8.75%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 500ms;
+}
+@media (max-width: 768px) {
+  .colapse {
+    width: 100%;
+    margin: 0;
+  }
+}
+.colapse--isOpen {
+  max-height: 500px;
+}
+.colapse--isClosed {
+  max-height: 53px;
+}
+@media (max-width: 768px) {
+  .colapse--isClosed {
+    max-height: 33px;
+  }
+}
+.colapse_header {
+  background-color: #FF6060;
+  color: white;
+  height: 33px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .colapse_header {
+    height: 13px;
+    padding: 10px 10px;
+  }
+}
+.colapse_header_title {
+  margin: 0;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  .colapse_header_title {
+    font-size: 13px;
+  }
+}
+.colapse_header_arrow {
+  transition: transform 500ms;
+}
+@media (max-width: 768px) {
+  .colapse_header_arrow {
+    width: 16px;
+    height: 9.14px;
+  }
+}
+.colapse_header_arrow--isOpen {
+  transform: rotate(-180deg);
+}
+.colapse_header_arrow--isClosed {
+  transform: rotate(0deg);
+}
+.colapse_content {
+  background-color: #F6F6F6;
+  color: black;
+  padding: 20px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 18px;
+  transition: all 500ms;
+}
+@media (max-width: 768px) {
+  .colapse_content {
+    font-size: 12px;
+  }
+}
+.colapse_content--isOpen {
+  transform: translateY(0);
+}
+.colapse_content--isClosed {
+  transform: translateY(-100%);
+}
+
+@keyframes colapseAnime {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.about_colapseContainer {
+  max-width: 1240px;
+  margin: 38px 6.94% -12px 6.94%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .about_colapseContainer {
+    margin: 19px 5.33% -8px 5.33%;
+    max-width: 89.33%;
+    gap: 20px;
+  }
+}
+
 body {
   max-width: 1440px;
   margin: auto;
