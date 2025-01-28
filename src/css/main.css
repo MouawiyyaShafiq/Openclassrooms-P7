@@ -239,6 +239,7 @@ footer p {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 500ms;
 }
 .carouselHousing_arrows {
   position: absolute;
@@ -274,20 +275,186 @@ footer p {
   }
 }
 
+.tag {
+  min-width: 95px;
+  height: 25px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 10px;
+}
+@media (max-width: 768px) {
+  .tag {
+    min-width: 64px;
+    height: 18px;
+    font-size: 10px;
+  }
+}
+
+.housingAdHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .housingAdHeader {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.housingAdHeader_titleAndTags {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .housingAdHeader_titleAndTags {
+    max-width: 100%;
+    gap: 14px;
+  }
+}
+.housingAdHeader_titleAndTags_title h1 {
+  margin: 0;
+  margin-bottom: 8px;
+  color: #FF6060;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 500;
+  text-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .housingAdHeader_titleAndTags_title h1 {
+    font-size: 18px;
+  }
+}
+.housingAdHeader_titleAndTags_title p {
+  margin: 0;
+  color: black;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  text-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .housingAdHeader_titleAndTags_title p {
+    font-size: 14px;
+  }
+}
+.housingAdHeader_titleAndTags_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.housingAdHeader_hostAndRating {
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+@media (max-width: 768px) {
+  .housingAdHeader_hostAndRating {
+    gap: 0;
+    max-width: 100%;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.housingAdHeader_hostAndRating_host {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+.housingAdHeader_hostAndRating_host_name {
+  font-family: Montserrat;
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  .housingAdHeader_hostAndRating_host_name {
+    display: none;
+  }
+}
+.housingAdHeader_hostAndRating_host_img {
+  width: 64px;
+  height: 64px;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .housingAdHeader_hostAndRating_host_img {
+    width: 32px;
+    height: 32px;
+  }
+}
+.housingAdHeader_hostAndRating_Rating {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+}
+@media (max-width: 768px) {
+  .housingAdHeader_hostAndRating_Rating {
+    gap: 6.5px;
+  }
+}
+@media (max-width: 768px) {
+  .housingAdHeader_hostAndRating_Rating img {
+    width: 13.5px;
+    height: 13px;
+  }
+}
+
+.housingAdInfo {
+  max-width: 1240px;
+  margin: 25px 6.94% 0px 6.94%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .housingAdInfo {
+    margin: 22px 5.33% 0px 5.33%;
+    max-width: 89.33%;
+    gap: 14px;
+  }
+}
+
+.housingAdColapses {
+  width: 100%;
+  display: flex;
+  gap: 76px;
+}
+@media (max-width: 768px) {
+  .housingAdColapses {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
 .colapse {
   max-width: 1023px;
-  width: 82.5%;
-  margin: 0 8.75%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   transition: all 500ms;
-}
-@media (max-width: 768px) {
-  .colapse {
-    width: 100%;
-    margin: 0;
-  }
 }
 .colapse--isOpen {
   max-height: 500px;
@@ -329,6 +496,7 @@ footer p {
   }
 }
 .colapse_header_arrow {
+  cursor: pointer;
   transition: transform 500ms;
 }
 @media (max-width: 768px) {
@@ -374,7 +542,8 @@ footer p {
   }
 }
 .about_colapseContainer {
-  max-width: 1240px;
+  max-width: 1140px;
+  padding: 0 6.94%;
   margin: 38px 6.94% -12px 6.94%;
   display: flex;
   flex-direction: column;
@@ -385,6 +554,7 @@ footer p {
   .about_colapseContainer {
     margin: 19px 5.33% -8px 5.33%;
     max-width: 89.33%;
+    padding: 0;
     gap: 20px;
   }
 }

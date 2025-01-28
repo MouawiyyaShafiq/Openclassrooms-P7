@@ -1,16 +1,10 @@
 .colapse {
     max-width: 1023px;
-    width: 82.5%;
-    margin: 0 8.75% ;
+    width: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     transition: all 500ms;
-
-    @media (max-width: 768px) {
-        width: 100%;
-        margin: 0;
-    }
 
     &--isOpen{
         max-height: 500px;
@@ -53,6 +47,7 @@
 
         &_arrow{
 
+            cursor: pointer;
             transition: transform 500ms;
 
             @media (max-width: 768px) {

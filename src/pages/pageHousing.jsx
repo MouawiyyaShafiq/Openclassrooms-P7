@@ -2,6 +2,8 @@ import { useNavigate, useParams} from "react-router-dom"
 import { useEffect } from "react"
 import { useState } from "react"
 import Carousel from "../components/carousel"
+import HousingAdHeader from "../components/housingAdHeader"
+import Colapse from "../components/colapse"
 
 function PageHousing () {
     const {currentAdId} = useParams()
@@ -43,9 +45,16 @@ function PageHousing () {
     if (currentAd) {
 
     return (
-
+        <>
         <Carousel page="Housing" carouselImgs={currentAd.pictures}/>
-        
+        <div className="housingAdInfo">
+        <HousingAdHeader adTitle={currentAd.title} adLocation={currentAd.location} tagList={currentAd.tags} fullName={currentAd.host.name} rating={currentAd.rating} hostImage={currentAd.host.picture}/>
+        <div className="housingAdColapses">
+            <Colapse colapseTitle="Description" colapseContent={currentAd.description}/>
+            <Colapse colapseTitle="Équipements" colapseContent={currentAd.equipments}/>    
+        </div>
+        </div>
+        </>
     )}
 
 }

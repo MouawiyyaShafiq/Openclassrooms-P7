@@ -19,7 +19,7 @@ function Colapse ({colapseTitle,colapseContent}) {
             
             <div className={`colapse_content colapse_content--${isOpen ? "isOpen" : "isClosed"}`}>
                 {Array.isArray(colapseContent) ? 
-                 <ul style={{"listStyle": "none"}}>
+                 <ul style={{"listStyle": "none","padding":"0","margin":"0"}}>
                     {colapseContent.map((content)=>{ 
                         return <li key={content}>{content}</li> 
                     })}

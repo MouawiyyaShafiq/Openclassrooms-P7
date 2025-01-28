@@ -2,7 +2,8 @@
 
 .about_colapseContainer{
 
-    max-width: 1240px;
+    max-width: 1140px;
+    padding: 0 6.94%;
     margin: 38px 6.94% -12px 6.94% ;
     display: flex;
     flex-direction: column;
@@ -12,6 +13,7 @@
     @media (max-width: 768px) {
         margin: 19px 5.33% -8px 5.33% ;
         max-width: 89.33%;
+        padding: 0;
         gap: 20px;
     }
 
