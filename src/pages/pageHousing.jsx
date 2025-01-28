@@ -26,10 +26,13 @@ function PageHousing () {
                 const adList = await response.json();
 
                 const foundAd = adList.find((ad)=>ad.id==currentAdId)
+
+                if(foundAd){
+                    setCurrentAd(foundAd) 
+                } else{
+                    navigate("*")
+                }
             
-                setCurrentAd(foundAd)
-
-
             } catch (error) {
                 navigate("*")
                 console.error("Erreur lors de la récupération des données", error)
