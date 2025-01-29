@@ -252,6 +252,7 @@ footer p {
   align-items: center;
 }
 .carouselHousing_arrows img {
+  cursor: pointer;
   margin: 0px 1.85%;
 }
 @media (max-width: 768px) {
