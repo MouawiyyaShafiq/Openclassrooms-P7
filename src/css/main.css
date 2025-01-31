@@ -42,6 +42,8 @@ footer {
   margin-top: 50px;
   flex-direction: column;
   align-items: center;
+  position: sticky;
+  top: 100%;
 }
 @media (max-width: 768px) {
   footer {
@@ -624,4 +626,7 @@ footer p {
 body {
   max-width: 1440px;
   margin: auto;
+}
+body #root {
+  height: 100vh;
 }/*# sourceMappingURL=main.css.map */

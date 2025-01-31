@@ -9,4 +9,9 @@
 body {
     max-width: 1440px;
     margin: auto;
+
+    & #root{
+        height: 100vh;
+    }
+
 }
