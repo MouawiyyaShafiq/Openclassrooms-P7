@@ -14,6 +14,8 @@ function PageHousing () {
 
     useEffect(()=>{
 
+        //  Fonction permettant de récupérer la liste des annonces de logement depuis le fichier JSON et d'ensuite récupérer l'annonce exacte ouverte dépendant de l'ID //
+
         async function fetchData() {
 
             try {

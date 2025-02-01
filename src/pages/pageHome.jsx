@@ -11,6 +11,8 @@ function PageHome () {
     const navigate = useNavigate()
 
     useEffect(()=>{
+
+        // Fonction permettant de récupérer la liste des annonces de logement depuis le fichier JSON //
         
         async function fetchData() {
 
@@ -34,7 +36,7 @@ function PageHome () {
 
         fetchData()
         
-    }, [housingAdList])
+    }, [])
 
     return (
         <>

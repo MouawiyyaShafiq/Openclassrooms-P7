@@ -8,6 +8,8 @@ function HousingAdHeader ({adTitle,adLocation,tagList,fullName,rating,hostImage}
     let firstName = "No Firstname"
     let lastName = "No Lastname"
 
+    // IF permettant de split le nom entier en prénom et nom //
+
     if(fullName) {
         let nameParts = fullName.split(" ");
         firstName == "" ? null : firstName = nameParts[0]

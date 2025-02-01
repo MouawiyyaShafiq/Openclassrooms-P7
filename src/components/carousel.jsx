@@ -7,6 +7,8 @@ function Carousel ({page, carouselImgs}) {
 
     const [currentImg, setCurrentImg] = useState(0)
 
+    //Fonction appelée suite au click sur une flèche la fonction permet de set CurrentImg au nextImg dépendant de la direction//
+
     function changeCurrentImg (direction) {
 
         if ( direction === -1) {

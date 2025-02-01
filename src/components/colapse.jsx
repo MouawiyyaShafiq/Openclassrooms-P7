@@ -5,6 +5,8 @@ function Colapse ({colapseTitle,colapseContent}) {
 
     const [isOpen , setIsOpen] = useState(false)
 
+    //Fonction appelée suite au click sur la flèche la fonction permet de set isOpen true ou false dépendant de l'état précèdent //
+
     function handleClick () {
         setIsOpen(!isOpen)
     }
