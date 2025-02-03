@@ -33,6 +33,9 @@ header .navLink {
 header .navLink:hover {
   text-decoration: underline;
 }
+header .active {
+  text-decoration: underline;
+}
 
 footer {
   background-color: black;
@@ -210,6 +213,7 @@ footer p {
 }
 @media (max-width: 768px) {
   .galleryHome {
+    background-color: white;
     margin: 22px 5.33% 0px 5.33%;
     padding: 0;
     gap: 20px 0px;
